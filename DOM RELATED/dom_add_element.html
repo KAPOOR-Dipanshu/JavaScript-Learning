@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Creating new element</title>
+</head>
+<body style="background-color: #212121; color: aliceblue; ">
+    <div class="week">
+        <div class="day">MONDAY</div>
+        <div class="day">TUESDAY</div>
+        <div class="day">WEDNESDAY</div>
+        <div class="day">THURSDAY</div>
+    </div>
+    <script>
+        const parent = document.querySelector('.week')
+        // console.log(parent);
+        // console.log(parent.children);
+        // console.log(parent.children[2].innerHTML);
+
+        for (let i = 0; i < parent.children.length; i++) {
+            // console.log((parent.children[i].innerHTML));
+        }
+
+        parent.children[2].style.color = 'orange';
+        parent.children[0].style.color = 'orange';
+// accessing first and last child of parent by below example
+        console.log(parent.firstElementChild.innerHTML);
+        console.log(parent.lastElementChild.innerHTML);
+
+// accessing family elements through one member below
+        const beta = document.querySelector('.day');
+        // console.log(beta.innerHTML);
+        // console.log(beta.parentElement);
+        // console.log(beta.nextElementSibling.innerHTML);
+
+// childnodes of parent class below
+        console.log('Nodes :', parent.childNodes);
+    </script>
+</body>
+</html>
