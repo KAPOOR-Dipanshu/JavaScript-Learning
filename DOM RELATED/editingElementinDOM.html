@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>Java</li>
+        <li>MongoDB</li>
+    </ul>
+</body>
+    <script>
+        // Basic method to create New element
+        function addLanguage(langName) {
+            const li = document.createElement('li')
+            li.innerHTML = `${langName}`
+            document.querySelector('.language').appendChild(li)
+        }
+        addLanguage("Node JS")
+        addLanguage("Python")
+
+        // Optimised approach
+        function addOptimise(langName) {
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector('.language').appendChild(li)
+        }
+        addOptimise("Go Lang")
+        // Editing an nth Element
+        const thirdChild = document.querySelector("li:nth-child(3)")
+        const newLI = document.createElement('li')
+        newLI.textContent = "Type Script"
+        thirdChild.replaceWith(newLI)
+
+        // Another approach for Editing
+        const firstChild = document.querySelector("li:first-child")
+        firstChild.outerHTML = "<li>POPO</li>"
+
+        // Removing element
+        const toBeRemoved = document.querySelector('li:last-child')
+        toBeRemoved.remove()
+
+    </script>
+</html>
