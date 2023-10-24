@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #424242; color: aliceblue;">
+    <h2>Chai aur Code</h2>
+    <button id="stop">STOP</button>
+</body>
+    <script>
+        const changeHeading = function(){
+            document.querySelector('h2').innerHTML = "BEST REPOSITORY EVER"
+            console.log("Changed");
+        }
+        const changing = setTimeout(changeHeading,5000)
+
+        document.querySelector('#stop').addEventListener('click',function(){
+            clearTimeout(changing)
+            console.log("Stopped");
+        })
+    </script>
+</html>
