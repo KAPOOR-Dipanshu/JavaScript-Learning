@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>MY ASSIGNMENT :</h2>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    const printDateAndHi = function(message) {
+        console.log(`${message}`,Date.now().toLocaleString)
+    }
+
+    let toBeStopped;
+
+    const starting = document.querySelector('#start').addEventListener('click',function(){
+        toBeStopped = setInterval(printDateAndHi,1000,"Time");
+    })
+
+    const stopping = document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(toBeStopped)
+    })
+</script>
+</html>
